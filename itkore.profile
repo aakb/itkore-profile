@@ -22,11 +22,6 @@ function itkore_form_install_configure_submit($form, FormStateInterface $form_st
     ->set('admin', 'adminimal_theme')
     ->save();
 
-  \Drupal::service('config.factory')
-    ->getEditable('system.theme')
-    ->set('default', 'itkore_base')
-    ->save();
-
   // Install custom modules.
   \Drupal::service('module_installer')
     ->install(['itkore_content_types']);
