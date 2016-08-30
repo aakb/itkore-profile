@@ -23,6 +23,15 @@
   "extra": {
     "installer-paths": {
       "profiles/itkore/modules/contrib/{$name}/": ["type:drupal-module"]
+    },
+    "merge-plugin": {
+      "include": [
+        "core/composer.json",
+        "profiles/itkore/composer.json"
+      ],
+      "recurse": false,
+      "replace": false,
+      "merge-extra": true
     }
   },
   "repositories": [
