@@ -3,7 +3,6 @@
   "description": "ITKore install profile",
   "require": {
     "composer/installers": "~1.0",
-    "wikimedia/composer-merge-plugin": "~1.3",
     "drupal/token": "~8",
     "drupal/imce": "~8",
     "drupal/ctools": "~8",
@@ -23,15 +22,6 @@
   "extra": {
     "installer-paths": {
       "profiles/itkore/modules/contrib/{$name}/": ["type:drupal-module"]
-    },
-    "merge-plugin": {
-      "include": [
-        "core/composer.json",
-        "profiles/itkore/composer.json"
-      ],
-      "recurse": false,
-      "replace": false,
-      "merge-extra": true
     }
   },
   "repositories": [
@@ -53,10 +43,6 @@
         "type": "git",
         "url": "https://github.com/md-systems/redirect"
       },
-      "drupal": {
-        "type": "composer",
-        "url": "https://packages.drupal.org/8"
-      }
     }
   ]
 }
