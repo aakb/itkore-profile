@@ -42,7 +42,7 @@
       "redirect": {
         "type": "git",
         "url": "https://github.com/md-systems/redirect"
-      },
+      }
     }
   ]
 }
