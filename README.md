@@ -77,7 +77,6 @@ To support the build som basic drupal contrib and custom ITK modules are added.
    * Provides default paragraph types commonly used by ITK
 * ITK admin links
    * Provides admin links as a block
-
 * Ctools
 * Entity reference revisions
 * Field group
