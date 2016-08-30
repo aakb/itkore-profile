@@ -21,7 +21,7 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "profiles/itkore/modules/contrib/{$name}/": ["type:drupal-module"]
+      "sites/all/modules/contrib/{$name}/": ["type:drupal-module"]
     }
   },
   "repositories": [
