@@ -79,9 +79,15 @@ To support the build som basic drupal contrib and custom ITK modules are added.
    * Provides admin links as a block
 
 * Ctools
+* Entity reference revisions
+* Field group
 * Imce
-* Pathauto
-* Redirect
-* Token
+* Metatag
 * Paragraphs
+* Pathauto
+* Paragraphs
+* Redirect
+* Role delegation
+* Token
+* Toolbar visibility
 * Youtube field
