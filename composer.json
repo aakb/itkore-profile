@@ -3,18 +3,18 @@
   "description": "ITKore install profile",
   "require": {
     "composer/installers": "~1.0",
-    "drupal/token": "~8",
-    "drupal/imce": "~8",
-    "drupal/ctools": "~8",
-    "drupal/pathauto": "~8",
-    "drupal/field_group": "~8",
-    "drupal/youtube": "~8",
-    "drupal/entity_reference_revisions": "~8",
-    "drupal/paragraphs": "~8",
-    "drupal/adminimal_theme": "~8",
-    "drupal/metatag": "~8",
+    "drupal/token": "~1",
+    "drupal/imce": "~1",
+    "drupal/ctools": "~3",
+    "drupal/pathauto": "~1",
+    "drupal/field_group": "~1",
+    "drupal/youtube": "~1",
+    "drupal/entity_reference_revisions": "~1",
+    "drupal/paragraphs": "~1",
+    "drupal/adminimal_theme": "~1",
+    "drupal/metatag": "~1",
     "drupal/redirect": "dev-8.x-1.x",
-    "drupal/role_delegation": "~8",
+    "drupal/role_delegation": "~1",
     "drupal/toolbar_visibility": "dev-8.x-1.x"
   },
   "minimum-stability": "dev",
@@ -44,7 +44,7 @@
     },
     {
       "type": "composer",
-      "url": "https://packages.drupal.org/8"
+      "url": "https://packagist.drupal-composer.org"
     }
   ]
 }
