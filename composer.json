@@ -2,6 +2,7 @@
   "name": "itk/itkore",
   "description": "ITKore install profile",
   "require": {
+    "composer/installers": "~1.0",
     "drupal/token": "~8",
     "drupal/imce": "~8",
     "drupal/ctools": "~8",
@@ -18,6 +19,11 @@
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "sites/all/modules/contrib/{$name}/": ["type:drupal-module"]
+    }
+  },
   "repositories": [
     {
       "type": "package",
