@@ -22,12 +22,12 @@ A local setup flow would be:
 
 * Go to vagrant repo
 
-* Create new local site
+* Create new local site:
 ```
 ./run.sh
 ```
 
-* Run D8 script
+* Run Drupal 8 setup script:
 ```
 ./base/scripts/setup-drupal8.sh
 ```
