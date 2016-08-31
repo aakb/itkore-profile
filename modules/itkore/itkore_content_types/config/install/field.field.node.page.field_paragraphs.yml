@@ -20,16 +20,12 @@ settings:
   handler_settings:
     target_bundles:
       itk_text_left: itk_text_left
-      itk_iframe: itk_iframe
       itk_internal_link: itk_internal_link
       itk_title_paragraph: itk_title_paragraph
       itk_youtube: itk_youtube
     target_bundles_drag_drop:
       itk_text_left:
         weight: -11
-        enabled: false
-      itk_iframe:
-        weight: -10
         enabled: false
       itk_internal_link:
         weight: -9

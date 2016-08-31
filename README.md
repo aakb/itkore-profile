@@ -63,10 +63,6 @@ ITKore contains the following modules
    * Sets up cookie page and 404.
 * ITKore fields
    * Sets up nodes with default fields
-* ITKore font
-   * Allows user to select from a list of supplied fonts
-* ITKore views
-   * Supplies default views
 
 ###Other
 To support the build som basic drupal contrib and custom ITK modules are added.
