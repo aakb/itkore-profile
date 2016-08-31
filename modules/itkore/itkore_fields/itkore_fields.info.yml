@@ -8,3 +8,4 @@ dependencies:
   - node
   - entity_reference_revisions
   - paragraphs
+  - itk_paragraph
