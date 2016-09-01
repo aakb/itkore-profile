@@ -26,7 +26,8 @@ function itkore_form_install_configure_form_alter(&$form, FormStateInterface $fo
         'itkore_text_filters' => 'ITK default rich text filters',
         'itkore_user_roles' => 'ITK default user roles and permissions',
         'itkore_user_theme' => 'ITK admin theme for user login pages',
-        'itkore_content_types' => 'Paragraphs, fields and default content types (Page, overview page, news)'
+        'itkore_content_types' => 'Paragraphs, fields and default content types (Page, overview page, news)',
+        'itk_hamburger_menu' => 'ITK hamburger menu'
       ),
     ),
   );

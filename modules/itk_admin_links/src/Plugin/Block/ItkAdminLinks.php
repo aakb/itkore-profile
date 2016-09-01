@@ -19,6 +19,7 @@ class ItkAdminLinks extends BlockBase {
   public function build() {
     $node = \Drupal::routeMatch()->getParameter('node');
     $variables = array();
+    $variables['nid'] = FALSE;
     if ($node) {
       $variables['nid'] = $node->id();
     }
