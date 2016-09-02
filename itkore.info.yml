@@ -50,3 +50,6 @@ dependencies:
   - token
   - toolbar_visibility
   - youtube
+
+#ITKore modules
+  - itkore_text_filters
