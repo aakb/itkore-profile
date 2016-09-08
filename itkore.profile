@@ -1,7 +1,6 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Extension\ThemeInstallerInterface;
 
 /**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().
@@ -46,15 +45,75 @@ function itkore_form_install_configure_submit($form, FormStateInterface $form_st
     }
   }
 
+  // Install themes.
   \Drupal::service('theme_installer')
     ->install(['itkore_base']);
 
   \Drupal::service('theme_installer')
     ->install(['adminimal_theme']);
 
-  // Set config variables
+
+  // ----- Set config variables. ---- //
+
+  // Set main theme
+  \Drupal::service('config.factory')
+    ->getEditable('system.theme')
+    ->set('default', 'itkore_base')
+    ->save();
+
+  // Set admin theme
   \Drupal::service('config.factory')
     ->getEditable('system.theme')
     ->set('admin', 'adminimal_theme')
     ->save();
+
+  // Set admin theme on node editing
+  \Drupal::configFactory()
+    ->getEditable('node.settings')
+    ->set('use_admin_theme', TRUE)
+    ->save(TRUE);
+
+  // Disable the user pictures on nodes.
+  \Drupal::configFactory()
+    ->getEditable('system.theme.global')
+    ->set('features.node_user_picture', FALSE)
+    ->save(TRUE);
+
+  // Allow visitor account creation, but with administrative approval.
+  \Drupal::configFactory()
+    ->getEditable('user.settings')
+    ->set('register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)
+    ->save(TRUE);
+
+  // Set front page.
+  \Drupal::configFactory()
+    ->getEditable('system.site')
+    ->set('page.front', '/front')
+    ->save(TRUE);
+
+  // Set imce settings.
+  \Drupal::configFactory()
+    ->getEditable('imce.settings')
+    ->set('roles_profiles.editor.public', 'custom_profile')
+    ->save(TRUE);
+
+  // Set meta-tag settings
+  \Drupal::configFactory()
+    ->getEditable('metatag.metatag_defaults.global')
+    ->set('tags.title', '[current-page:title]')
+    ->save(TRUE);
+  \Drupal::configFactory()
+    ->getEditable('metatag.metatag_defaults.node')
+    ->set('tags.title', '[node:title]')
+    ->save(TRUE);
+  \Drupal::configFactory()
+    ->getEditable('metatag.metatag_defaults.front'
+    )->set('tags.title', '[site:name]')
+    ->save(TRUE);
+
+  // Set date format.
+  \Drupal::configFactory()
+    ->getEditable('core.date_format.medium')
+    ->set('pattern', 'j. F Y')
+    ->save(TRUE);
 }
