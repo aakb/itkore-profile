@@ -1,5 +1,7 @@
 <?php
 
+use \Drupal\node\Entity\Node;
+
 /**
  * Implements hook_install().
  *
