@@ -4,5 +4,7 @@ interface translation project: itk_cookie_message
 interface translation server pattern: profiles/itkore/modules/itk_cookie_message/translations/itk_cookie_message.%language.po
 package: ITK
 type: module
+dependencies:
+  - itkore_text_filters
 version: 1.0
 core: 8.x
