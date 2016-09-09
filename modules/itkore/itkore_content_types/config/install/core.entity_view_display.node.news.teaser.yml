@@ -14,8 +14,6 @@ dependencies:
   module:
     - image
     - user
-_core:
-  default_config_hash: 5BW4VoQbXIboyPuQAGW6fN7dJVmQXMPIeBtcMufqqps
 id: node.news.teaser
 targetEntityType: node
 bundle: news

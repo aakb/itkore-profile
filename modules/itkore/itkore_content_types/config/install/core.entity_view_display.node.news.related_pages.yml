@@ -14,8 +14,6 @@ dependencies:
   module:
     - image
     - user
-_core:
-  default_config_hash: 8EEP5roEHsc7PsOExvsF1mAkq_pKRAnMsR1IY9xvU8Y
 id: node.news.related_pages
 targetEntityType: node
 bundle: news

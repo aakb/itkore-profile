@@ -44,8 +44,6 @@ third_party_settings:
         required_fields: true
         classes: ''
         id: ''
-_core:
-  default_config_hash: Mvedpg1JORgRsX50Mb-hijaFLPpCuC4mqkzgRCpFHLE
 id: node.news.default
 targetEntityType: node
 bundle: news

@@ -15,8 +15,6 @@ dependencies:
     - image
     - text
     - user
-_core:
-  default_config_hash: Q53lcBYIEu-HQR5mlU7gwuXNzlVn-odSBz1GXJNm1RM
 id: node.news.default
 targetEntityType: node
 bundle: news

@@ -44,8 +44,6 @@ third_party_settings:
         required_fields: true
         classes: ''
         id: ''
-_core:
-  default_config_hash: O3B3IoxT9XGx-chr84qNh7Crv0oa0xrcmBcXVOoF8uk
 id: node.page.default
 targetEntityType: node
 bundle: page

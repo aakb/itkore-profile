@@ -14,8 +14,6 @@ dependencies:
   module:
     - image
     - user
-_core:
-  default_config_hash: ER7mWJcVyM-FhEdgL6vFWaiTo6DY-D4Ue2aSsTMj98Q
 id: node.overview_page.related_pages
 targetEntityType: node
 bundle: overview_page

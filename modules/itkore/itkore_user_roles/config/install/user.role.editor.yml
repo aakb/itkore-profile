@@ -1,7 +1,5 @@
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: ojZmnLPFm-R9kYDG03J_VO2o78XQVjp7zA3URyj4OfY
 id: editor
 label: Editor
 weight: 2
