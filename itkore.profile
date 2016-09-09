@@ -88,7 +88,7 @@ function itkore_form_install_configure_submit($form, FormStateInterface $form_st
   // Set front page.
   \Drupal::configFactory()
     ->getEditable('system.site')
-    ->set('page.front', '/front')
+    ->set('page.front', '/user')
     ->save(TRUE);
 
   // Set imce settings.
@@ -107,13 +107,29 @@ function itkore_form_install_configure_submit($form, FormStateInterface $form_st
     ->set('tags.title', '[node:title]')
     ->save(TRUE);
   \Drupal::configFactory()
-    ->getEditable('metatag.metatag_defaults.front'
-    )->set('tags.title', '[site:name]')
+    ->getEditable('metatag.metatag_defaults.front')
+    ->set('tags.title', '[site:name]')
     ->save(TRUE);
 
-  // Set date format.
+  // Set date formats.
+  \Drupal::configFactory()
+    ->getEditable('core.date_format.short')
+    ->set('pattern', 'd.m.Y')
+    ->save(TRUE);
+
   \Drupal::configFactory()
     ->getEditable('core.date_format.medium')
     ->set('pattern', 'j. F Y')
+    ->save(TRUE);
+
+  \Drupal::configFactory()
+    ->getEditable('core.date_format.long')
+    ->set('pattern', 'l \d.  j. F Y')
+    ->save(TRUE);
+
+  // Set toolbar visibility.
+  \Drupal::configFactory()
+    ->getEditable('toolbar_visibility.default_config')
+    ->set('toolbar_visibility_theme.itkore_base', 'itkore_base')
     ->save(TRUE);
 }

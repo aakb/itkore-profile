@@ -3,6 +3,8 @@
 namespace Drupal\itk_admin_links\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Access\AccessResult;
 
 /**
  * Provides admin links
@@ -37,6 +39,13 @@ class ItkAdminLinks extends BlockBase {
       ),
       '#nid' => $variables['nid'],
     );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function blockAccess(AccountInterface $account, $return_as_object = FALSE) {
+    return AccessResult::allowedIfHasPermission($account, 'administer nodes');
   }
 }
 ?>
