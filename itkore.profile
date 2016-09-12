@@ -37,6 +37,13 @@ function itkore_form_install_configure_form_alter(&$form, FormStateInterface $fo
 function itkore_form_install_configure_submit($form, FormStateInterface $form_state) {
   $form_values = $form_state->getValues();
 
+  if ($form_values['modules']['itkore_content_types'] == 'itkore_content_types') {
+    // Install custom modules.
+    \Drupal::service('module_installer')
+      ->install('itkore_content_types');
+  }
+
+
   foreach($form_values['modules'] as $key => $value) {
     if ($key == $value) {
       // Install custom modules.
