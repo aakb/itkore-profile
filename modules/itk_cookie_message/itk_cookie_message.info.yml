@@ -6,3 +6,5 @@ package: ITK
 type: module
 version: 1.0
 core: 8.x
+dependencies:
+  - itkore_content_types
