@@ -7,7 +7,6 @@ use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\system\Entity\Menu;
 use Drupal\Core\Menu\MenuTreeParameters;
-use Drupal\Core\Url;
 
 /**
  * Provides hamburger menu

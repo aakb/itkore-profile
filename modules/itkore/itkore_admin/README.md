@@ -1,2 +1,2 @@
 # ITKore_base
-Sets custom configuration for site.
+Holds wrapper page for custom configuration

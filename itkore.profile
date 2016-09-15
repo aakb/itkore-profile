@@ -19,13 +19,15 @@ function itkore_form_install_configure_form_alter(&$form, FormStateInterface $fo
       '#type' => 'checkboxes',
       '#title' => 'Activate modules',
       '#options' => array(
-        'itkore_admin' => 'ITKore site specific config page',
         'itk_admin_links' => 'ITK admin links tool',
         'itk_cookie_message' => 'ITK cookie message',
         'itkore_user_roles' => 'ITK default user roles and permissions',
         'itkore_user_theme' => 'ITK admin theme for user login pages',
         'itkore_content_types' => 'Paragraphs, fields and default content types (Page, overview page, news)',
-        'itk_hamburger_menu' => 'ITK hamburger menu'
+        'itk_hamburger_menu' => 'ITK hamburger menu',
+        'itkore_frontpage_header' => 'ITK frontpage header block with configurable ui',
+        'itkore_footer' => 'ITK footer block with configurable ui'
+
       ),
     ),
   );
