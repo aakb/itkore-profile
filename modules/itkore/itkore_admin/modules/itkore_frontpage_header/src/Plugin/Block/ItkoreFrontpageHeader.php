@@ -4,6 +4,7 @@ namespace Drupal\itkore_frontpage_header\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\file\Entity\File;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Provides frontpage header
@@ -32,6 +33,23 @@ class ItkoreFrontpageHeader extends BlockBase {
       ),
       '#variables' => $config,
     );
+  }
+
+
+  /**
+   * {@inheritdoc}
+   */
+  public function blockForm($form, FormStateInterface $form_state) {
+    $form = parent::blockForm($form, $form_state);
+
+    // Menu select list
+    $form['item'] = array(
+      '#type' => 'item',
+      '#description' => t('NOTE: Part of the configuration for this block is found in <a href="/admin/site-setup/frontpage-header">site settings</a>'),
+      '#weight' => '0',
+    );
+
+    return $form;
   }
 }
 ?>

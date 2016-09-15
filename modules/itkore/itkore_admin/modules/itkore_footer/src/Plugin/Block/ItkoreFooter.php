@@ -4,6 +4,7 @@ namespace Drupal\itkore_footer\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Provides footer content
@@ -51,6 +52,22 @@ class ItkoreFooter extends BlockBase {
       '#footer_text' => $footer_text,
       '#menus' => $menus,
     );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function blockForm($form, FormStateInterface $form_state) {
+    $form = parent::blockForm($form, $form_state);
+
+    // Menu select list
+    $form['item'] = array (
+      '#type' => 'item',
+      '#description' => t('NOTE: Part of the configuration for this block is found in <a href="/admin/site-setup/footer">site settings</a>'),
+      '#weight' => '0',
+    );
+
+    return $form;
   }
 }
 ?>

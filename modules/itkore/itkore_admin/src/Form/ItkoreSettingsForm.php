@@ -8,7 +8,6 @@ namespace Drupal\itkore_admin\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 
 /**
  * Class ItkoreSettingsForm
