@@ -1,8 +1,8 @@
-# Danish translation of ITkore frontpage header (8.x-1.0)
+# Danish translation of ITkore admin (8.x-1.0)
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ITkore frontpage header (8.x-1.0)\n"
+"Project-Id-Version: ITkore admin (8.x-1.0)\n"
 "POT-Creation-Date: 2016-06-12 11:00+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: Danish\n"
