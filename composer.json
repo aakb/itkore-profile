@@ -1,5 +1,5 @@
 {
-  "name": "itk-drupal-profiles/itkore",
+  "name": "drupal/itkore",
   "description": "ITKore install profile",
   "type": "drupal-profile",
   "keywords": ["Drupal"],
