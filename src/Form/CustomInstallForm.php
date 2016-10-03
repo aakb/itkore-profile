@@ -42,8 +42,17 @@ class CustomInstallForm extends FormBase {
           'itkore_content_types' => 'Paragraphs, fields and default content types (Page, overview page, news)',
           'itk_hamburger_menu' => 'ITK hamburger menu',
           'itkore_frontpage_header' => 'ITK frontpage header block with configurable ui',
-          'itkore_footer' => 'ITK footer block with configurable ui'
-
+          'itkore_footer' => 'ITK footer block with configurable ui',
+        ),
+        '#default_value' => array(
+          'itk_admin_links',
+          'itk_cookie_message',
+          'itkore_user_roles',
+          'itkore_user_theme',
+          'itkore_content_types',
+          'itk_hamburger_menu',
+          'itkore_frontpage_header',
+          'itkore_footer',
         ),
       ),
     );
