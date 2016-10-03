@@ -74,7 +74,7 @@ function _itkore_install_custom_modules_batch($module, $module_name, &$context) 
   $context['results'][] = $module;
   $context['message'] = t('Installed %module module.', array('%module' => $module_name));
 }
-
+ 
 
 /**
  * Setup configuration variables
