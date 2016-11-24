@@ -49,8 +49,16 @@ class ItkoreFooterSettingsForm extends FormBase {
     }
     asort($menus);
 
+    $form['contact_text'] = array(
+      '#title' => $this->t('Contact text'),
+      '#type' => 'text_format',
+      '#format' => 'filtered_html',
+      '#default_value' => $config->get('contact_text'),
+      '#weight' => '1',
+    );
+
     $form['footer_text'] = array(
-      '#title' => $this->t('Text'),
+      '#title' => $this->t('Footer text'),
       '#type' => 'text_format',
       '#format' => 'filtered_html',
       '#default_value' => $config->get('footer_text'),
@@ -83,6 +91,7 @@ class ItkoreFooterSettingsForm extends FormBase {
 
     // Set the rest of the configuration values.
     $this->getBaseConfig()->setMultiple(array(
+      'contact_text' => $form_state->getValue('contact_text')['value'],
       'footer_text' => $form_state->getValue('footer_text')['value'],
       'footer_menus' => $form_state->getValue('footer_menus'),
     ));
