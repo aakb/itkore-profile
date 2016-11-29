@@ -46,9 +46,11 @@ class ItkoreFooter extends BlockBase {
         // Finally, build a renderable array from the transformed tree.
         $menu = $menu_tree->build($tree);
         $menu_entity = \Drupal::entityTypeManager()->getStorage('menu')->load($value);
-        $menu['#menu_name'] = $menu_entity->label();
-        $menu_html = render($menu);
-        $menus[$value] = $menu_html;
+        if ($menu_entity) {
+          $menu['#menu_name'] = $menu_entity->label();
+          $menu_html = render($menu);
+          $menus[$value] = $menu_html;
+        }
       }
     }
     $contact_text = check_markup($config['contact_text'], 'filtered_html');
