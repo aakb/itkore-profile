@@ -80,21 +80,12 @@ function _itkore_install_custom_modules_batch($module, $module_name, &$context) 
  * Setup configuration variables
  */
 function itkore_install_config() {
-  // Install themes.
-  \Drupal::service('theme_installer')
-    ->install(['itkore_base']);
 
   \Drupal::service('theme_installer')
     ->install(['adminimal_theme']);
 
 
   // ----- Set config variables. ---- //
-
-  // Set main theme
-  \Drupal::service('config.factory')
-    ->getEditable('system.theme')
-    ->set('default', 'itkore_base')
-    ->save();
 
   // Set admin theme
   \Drupal::service('config.factory')
@@ -160,11 +151,5 @@ function itkore_install_config() {
   \Drupal::configFactory()
     ->getEditable('core.date_format.long')
     ->set('pattern', 'l \d.  j. F Y')
-    ->save(TRUE);
-
-  // Set toolbar visibility.
-  \Drupal::configFactory()
-    ->getEditable('toolbar_visibility.default_config')
-    ->set('toolbar_visibility_theme.itkore_base', 'itkore_base')
     ->save(TRUE);
 }
