@@ -35,7 +35,6 @@ class ItkHamburgerMenu extends BlockBase implements BlockPluginInterface {
     $manipulators = array(
       array('callable' => 'menu.default_tree_manipulators:checkAccess'),
       array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
-      array('callable' => 'menu.default_tree_manipulators:flatten'),
     );
     $variables['menu'] = $menu_tree->transform($variables['menu'], $manipulators);
     $menu = $menu_tree->build($variables['menu']);

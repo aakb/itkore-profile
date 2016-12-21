@@ -11,7 +11,11 @@ function itkore_footer_theme($existing, $type, $theme, $path) {
   return array(
     'itkore_footer_block' => array(
       'template' => 'itkore-footer-block',
-      'variables' => ['footer_text' => NULL, 'menus' => NULL],
+      'variables' => [
+        'footer_text' => NULL,
+        'menus' => NULL,
+        'contact_text' => NULL
+      ],
     ),
   );
-}
+} 
