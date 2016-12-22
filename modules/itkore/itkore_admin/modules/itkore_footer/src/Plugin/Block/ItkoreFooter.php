@@ -21,51 +21,40 @@ class ItkoreFooter extends BlockBase {
   public function build() {
     $config = \Drupal::getContainer()->get('itkore_admin.itkore_config')->getAll();
     $menus = array();
-
-
-    foreach ($config['footer_menus'] as $key => $value) {
-      if ($key ===  $value) {
-        $menu_tree = \Drupal::menuTree();
-        $menu_name = $value;
-
-        // Build the typical default set of menu tree parameters.
-        $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
-
-        // Load the tree based on this set of parameters.
-        $tree = $menu_tree->load($menu_name, $parameters);
-
-        // Transform the tree using the manipulators you want.
-        $manipulators = array(
-          // Only show links that are accessible for the current user.
-          array('callable' => 'menu.default_tree_manipulators:checkAccess'),
-          // Use the default sorting of menu links.
-          array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
-        );
-        $tree = $menu_tree->transform($tree, $manipulators);
-
-        // Finally, build a renderable array from the transformed tree.
-        $menu = $menu_tree->build($tree);
-        $menu_entity = \Drupal::entityTypeManager()->getStorage('menu')->load($value);
-        if ($menu_entity) {
-          $menu['#menu_name'] = $menu_entity->label();
-          $menu_html = render($menu);
-          $menus[$value] = $menu_html;
+    $menu_tree = \Drupal::menuTree();
+    
+    if (isset($config['footer_menus'])) {
+      foreach ($config['footer_menus'] as $key => $value) {
+        if ($key ===  $value) {
+          $parameters = new MenuTreeParameters();
+          $parameters
+            ->setRoot('')
+            ->excludeRoot()
+            ->onlyEnabledLinks();
+          $variables['menu'][$key] = $menu_tree->load($value, $parameters);
+          $manipulators = array(
+            array('callable' => 'menu.default_tree_manipulators:checkAccess'),
+            array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
+            array('callable' => 'menu.default_tree_manipulators:flatten'),
+          );
+          $variables['menu'][$key] = $menu_tree->transform($variables['menu'][$key], $manipulators);
+          $menu[$key] = $menu_tree->build($variables['menu'][$key]);
+          $menus[$key] = render($menu[$key]);
         }
       }
-    }
-    $contact_text = check_markup($config['contact_text'], 'filtered_html');
-    $footer_text = check_markup($config['footer_text'], 'filtered_html');
 
-    return array(
-      '#type' => 'markup',
-      '#theme' => 'itkore_footer_block',
-      '#cache' => array(
-        'max-age' => 0,
-      ),
-      '#contact_text' => $contact_text,
-      '#footer_text' => $footer_text,
-      '#menus' => $menus,
-    );
+      $footer_text = check_markup($config['footer_text'], 'filtered_html');
+
+      return array(
+        '#type' => 'markup',
+        '#theme' => 'itkore_footer_block',
+        '#cache' => array(
+          'max-age' => 0,
+        ),
+        '#footer_text' => $footer_text,
+        '#menus' => $menus,
+      );
+    }
   }
 
   /**

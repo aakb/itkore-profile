@@ -41,12 +41,13 @@ class ItkoreSettingsForm extends FormBase {
     // Get local tasks
     $manager = \Drupal::service('plugin.manager.menu.local_task');
     $tasks = $manager->getLocalTasks(\Drupal::routeMatch()->getRouteName(), 0);
+    unset($tasks['tabs']['itkore_admin.admin']);
 
     // Add front page wrapper.
     $form['menu_wrapper'] = array(
       '#title' => $this->t('Configure'),
       '#type' => 'item',
-      '#description' => render($tasks),
+      '#description' => render($tasks['tabs']),
       '#weight' => '2',
       '#open' => TRUE,
     );

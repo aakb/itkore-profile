@@ -49,16 +49,8 @@ class ItkoreFooterSettingsForm extends FormBase {
     }
     asort($menus);
 
-    $form['contact_text'] = array(
-      '#title' => $this->t('Contact text'),
-      '#type' => 'text_format',
-      '#format' => 'filtered_html',
-      '#default_value' => $config->get('contact_text'),
-      '#weight' => '1',
-    );
-
     $form['footer_text'] = array(
-      '#title' => $this->t('Footer text'),
+      '#title' => $this->t('Text'),
       '#type' => 'text_format',
       '#format' => 'filtered_html',
       '#default_value' => $config->get('footer_text'),
@@ -69,7 +61,7 @@ class ItkoreFooterSettingsForm extends FormBase {
       '#title' => $this->t('Menus'),
       '#type' => 'checkboxes',
       '#options' => $menus,
-      '#default_value' => $config->get('footer_menus'),
+      '#default_value' => ($config->get('footer_menus')) ? $config->get('footer_menus') : array(),
       '#weight' => '2',
       '#access' => \Drupal::currentUser()->hasPermission('administer site configuration'),
     );
@@ -91,7 +83,6 @@ class ItkoreFooterSettingsForm extends FormBase {
 
     // Set the rest of the configuration values.
     $this->getBaseConfig()->setMultiple(array(
-      'contact_text' => $form_state->getValue('contact_text')['value'],
       'footer_text' => $form_state->getValue('footer_text')['value'],
       'footer_menus' => $form_state->getValue('footer_menus'),
     ));
