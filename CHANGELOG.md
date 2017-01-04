@@ -1,5 +1,9 @@
 # ITKORE
 Changelog
+
+##1.0.6
+- Removed module dependency for itkore admin
+
 ##1.0.5
 - Removed module dependency for itk_cookie_message
 

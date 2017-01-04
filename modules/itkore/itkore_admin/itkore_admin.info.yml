@@ -9,4 +9,3 @@ core: 8.x
 dependencies:
   - system
   - file
-  - itkore_content_types
