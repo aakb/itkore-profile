@@ -4,6 +4,7 @@ dependencies:
     - field.storage.node.field_paragraphs
     - node.type.news
   module:
+    - itkore_content_types
     - entity_reference_revisions
 id: node.news.field_paragraphs
 field_name: field_paragraphs

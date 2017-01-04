@@ -1,6 +1,7 @@
 status: true
 dependencies:
   module:
+    - itkore_fields
     - node
 id: node.field_lead
 field_name: field_lead

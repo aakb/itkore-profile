@@ -4,6 +4,7 @@ dependencies:
     - field.storage.paragraph.field_youtube
     - paragraphs.paragraphs_type.itk_youtube
   module:
+    - itk_paragraph
     - youtube
 id: paragraph.itk_youtube.field_youtube
 field_name: field_youtube

@@ -4,6 +4,7 @@ dependencies:
     - field.storage.node.body
     - node.type.page
   module:
+    - itkore_content_types
     - text
 id: node.page.body
 field_name: body

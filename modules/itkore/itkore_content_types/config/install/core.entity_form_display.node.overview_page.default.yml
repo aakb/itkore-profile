@@ -17,6 +17,7 @@ dependencies:
     - paragraphs
     - path
     - text
+    - itkore_content_types
 third_party_settings:
   field_group:
     group_flexible_content:

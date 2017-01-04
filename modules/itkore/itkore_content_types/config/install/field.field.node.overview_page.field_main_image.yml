@@ -4,6 +4,7 @@ dependencies:
     - field.storage.node.field_main_image
     - node.type.overview_page
   module:
+    - itkore_content_types
     - image
 id: node.overview_page.field_main_image
 field_name: field_main_image

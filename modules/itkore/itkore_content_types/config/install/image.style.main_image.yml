@@ -1,5 +1,7 @@
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - itkore_content_types
 name: main_image
 label: 'Main Image (W: 1216)'
 effects:

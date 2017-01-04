@@ -5,6 +5,8 @@ dependencies:
     - node.type.news
     - node.type.overview_page
     - node.type.page
+  module:
+    - itkore_content_types
 id: node.overview_page.field_pages
 field_name: field_pages
 entity_type: node

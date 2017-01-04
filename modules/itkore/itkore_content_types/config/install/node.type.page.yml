@@ -1,6 +1,7 @@
 status: true
 dependencies:
   module:
+    - itkore_content_types
     - menu_ui
 third_party_settings:
   menu_ui:

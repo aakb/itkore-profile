@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - itkore_fields
     - node
 id: node.field_related_page_teaser
 field_name: field_related_page_teaser

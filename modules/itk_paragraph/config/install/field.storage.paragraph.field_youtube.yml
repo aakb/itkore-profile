@@ -1,6 +1,7 @@
 status: true
 dependencies:
   module:
+    - itk_paragraph
     - paragraphs
     - youtube
 id: paragraph.field_youtube

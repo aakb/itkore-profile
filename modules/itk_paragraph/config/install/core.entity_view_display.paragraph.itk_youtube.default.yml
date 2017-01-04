@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.itk_youtube.field_youtube
     - paragraphs.paragraphs_type.itk_youtube
   module:
+    - itk_paragraph
     - youtube
 id: paragraph.itk_youtube.default
 targetEntityType: paragraph

@@ -3,6 +3,8 @@ dependencies:
   config:
     - field.storage.node.field_lead
     - node.type.news
+  module:
+    - itkore_content_types
 id: node.news.field_lead
 field_name: field_lead
 entity_type: node

@@ -1,6 +1,7 @@
 status: true
 dependencies:
   module:
+    - itk_paragraph
     - paragraphs
 id: paragraph.field_title
 field_name: field_title

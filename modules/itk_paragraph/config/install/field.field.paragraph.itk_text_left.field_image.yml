@@ -4,6 +4,7 @@ dependencies:
     - field.storage.paragraph.field_image
     - paragraphs.paragraphs_type.itk_text_left
   module:
+    - itk_paragraph
     - image
 id: paragraph.itk_text_left.field_image
 field_name: field_image

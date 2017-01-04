@@ -14,6 +14,7 @@ dependencies:
   module:
     - image
     - user
+    - itkore_content_types
 id: node.overview_page.teaser
 targetEntityType: node
 bundle: overview_page

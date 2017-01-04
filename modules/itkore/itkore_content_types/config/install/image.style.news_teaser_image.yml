@@ -1,5 +1,7 @@
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - itkore_content_types
 name: news_teaser_image
 label: 'News teaser image '
 effects:

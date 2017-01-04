@@ -4,6 +4,7 @@ dependencies:
     - field.storage.node.body
     - node.type.news
   module:
+    - itkore_content_types
     - text
 id: node.news.body
 field_name: body

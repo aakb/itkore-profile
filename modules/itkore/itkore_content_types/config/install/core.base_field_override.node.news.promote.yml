@@ -2,6 +2,8 @@ status: true
 dependencies:
   config:
     - node.type.news
+  module:
+    - itkore_content_types
 id: node.news.promote
 field_name: promote
 entity_type: node

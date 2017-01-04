@@ -1,5 +1,7 @@
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - itk_paragraph
 name: paragraphs_content_image
 label: 'Paragraphs Content Image'
 effects:

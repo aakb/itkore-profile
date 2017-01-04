@@ -15,6 +15,7 @@ dependencies:
     - image
     - text
     - user
+    - itkore_content_types
 id: node.overview_page.default
 targetEntityType: node
 bundle: overview_page

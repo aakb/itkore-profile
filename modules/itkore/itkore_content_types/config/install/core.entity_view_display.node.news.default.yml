@@ -15,6 +15,7 @@ dependencies:
     - image
     - text
     - user
+    - itkore_content_types
 id: node.news.default
 targetEntityType: node
 bundle: news

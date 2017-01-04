@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.itk_text_left.field_title
     - paragraphs.paragraphs_type.itk_text_left
   module:
+    - itk_paragraph
     - image
     - text
 id: paragraph.itk_text_left.default

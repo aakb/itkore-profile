@@ -4,6 +4,7 @@ dependencies:
     - field.storage.paragraph.field_file
     - paragraphs.paragraphs_type.itk_internal_link
   module:
+    - itk_paragraph
     - file
 id: paragraph.itk_internal_link.field_file
 field_name: field_file

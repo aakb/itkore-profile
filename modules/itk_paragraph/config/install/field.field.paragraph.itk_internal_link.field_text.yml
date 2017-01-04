@@ -4,6 +4,7 @@ dependencies:
     - field.storage.paragraph.field_text
     - paragraphs.paragraphs_type.itk_internal_link
   module:
+    - itk_paragraph
     - text
 id: paragraph.itk_internal_link.field_text
 field_name: field_text

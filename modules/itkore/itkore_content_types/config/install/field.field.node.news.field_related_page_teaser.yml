@@ -3,6 +3,8 @@ dependencies:
   config:
     - field.storage.node.field_related_page_teaser
     - node.type.news
+  module:
+    - itkore_content_types
 id: node.news.field_related_page_teaser
 field_name: field_related_page_teaser
 entity_type: node

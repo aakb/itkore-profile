@@ -1,6 +1,7 @@
 status: true
 dependencies:
   module:
+    - itkore_content_types
     - node
 id: nyheder
 label: Nyheder

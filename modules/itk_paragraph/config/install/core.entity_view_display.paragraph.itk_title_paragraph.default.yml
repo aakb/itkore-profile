@@ -3,6 +3,8 @@ dependencies:
   config:
     - field.field.paragraph.itk_title_paragraph.field_title
     - paragraphs.paragraphs_type.itk_title_paragraph
+  module:
+    - itk_paragraph
 id: paragraph.itk_title_paragraph.default
 targetEntityType: paragraph
 bundle: itk_title_paragraph
