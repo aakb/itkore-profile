@@ -1,5 +1,7 @@
 # ITKORE
 Changelog
+##1.0.5
+- Removed module dependency for itk_cookie_message
 
 ##1.0.4
 - Added module config dependency for modules providing configuration
