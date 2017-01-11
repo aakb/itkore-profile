@@ -1,6 +1,10 @@
 # ITKORE
 Changelog
 
+##1.0.7
+- Changed access on itk_admin_links
+- Updated readme
+
 ##1.0.6
 - Removed module dependency for itkore admin
 

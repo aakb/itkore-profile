@@ -45,7 +45,7 @@ class ItkAdminLinks extends BlockBase {
    * {@inheritdoc}
    */
   public function blockAccess(AccountInterface $account, $return_as_object = FALSE) {
-    return AccessResult::allowedIfHasPermission($account, 'administer nodes');
+    return AccessResult::allowedIfHasPermission($account, 'access content overview');
   }
 }
 ?>
