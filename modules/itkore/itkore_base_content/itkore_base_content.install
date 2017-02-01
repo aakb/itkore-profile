@@ -63,9 +63,11 @@ function itkore_base_content_install() {
   ));
   $node->save();
 
+  \Drupal::service('path.alias_storage')->save('/node/' . $node->id(), '/siden-blev-ikke-fundet', 'da');
+
   // Set 404 page format.
   \Drupal::configFactory()
     ->getEditable('system.site')
-    ->set('page.404', '/node/' . $node->id())
+    ->set('page.404', '/siden-blev-ikke-fundet')
     ->save(TRUE);
 }
