@@ -43,6 +43,7 @@ class ItkoreFooter extends BlockBase {
         }
       }
 
+      $footer_title = $config['footer_title'];
       $footer_text = check_markup($config['footer_text'], 'filtered_html');
 
       return array(
@@ -51,6 +52,7 @@ class ItkoreFooter extends BlockBase {
         '#cache' => array(
           'max-age' => 0,
         ),
+        '#footer_title' => $footer_title,
         '#footer_text' => $footer_text,
         '#menus' => $menus,
       );
